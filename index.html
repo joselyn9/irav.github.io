@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#e4e2e4","error":"#ba1a1a","surface-container-high":"#eae7ea","inverse-on-surface":"#f3f0f2","on-surface-variant":"#414753","on-secondary":"#ffffff","tertiary-fixed-dim":"#c7c6cb","secondary-fixed":"#78fbb6","surface-container-lowest":"#ffffff","on-tertiary-container":"#fcfaff","on-primary-fixed":"#001b3f","error-container":"#ffdad6","surface-container-low":"#f6f3f5","on-primary":"#ffffff","on-secondary-container":"#007147","on-surface":"#1b1b1d","tertiary":"#5a5b5f","tertiary-container":"#737378","tertiary-fixed":"#e3e2e7","on-tertiary":"#ffffff","primary-fixed-dim":"#abc7ff","on-secondary-fixed-variant":"#005232","on-error":"#ffffff","surface-bright":"#fcf8fb","on-secondary-fixed":"#002111","surface-variant":"#e4e2e4","inverse-primary":"#abc7ff","inverse-surface":"#303032","on-primary-fixed-variant":"#00458f","surface-tint":"#005cbb","secondary-fixed-dim":"#59de9b","on-error-container":"#93000a","on-primary-container":"#fcfbff","surface-dim":"#dcd9dc","outline":"#717785","on-tertiary-fixed-variant":"#46464b","surface":"#fcf8fb","primary-fixed":"#d7e2ff","outline-variant":"#c1c6d6","background":"#fcf8fb","surface-container":"#f0edef","secondary":"#006d43","secondary-container":"#75f8b3","on-background":"#1b1b1d","primary-container":"#0071e3","on-tertiary-fixed":"#1a1b1f","primary":"#0059b5"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","margin-lg":"3.5rem","gutter-lg":"2rem","margin-sm":"1.25rem","gutter-sm":"1rem","margin":"2rem","space-sm":"0.5rem","gutter":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem","space-md":"1rem"},"fontFamily":{"display-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"]}}}}</script></head><body class="bg-[#fcf8fb] font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-white">
+<!-- 1. HEADER NAVIGATION (Cleaned up: only Logo and Centered Status Pill) -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-md bg-white/85 dark:bg-[#121214]/85 border-b border-black/5 transition-all">
+<div class="h-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+<!-- Logo -->
+<a class="flex items-center gap-2.5 shrink-0" href="#">
+<img alt="iRAV Logo" class="h-7 sm:h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCFdytr2zK6DdHrDqIFY_PaZL8D0G5h16Qhi1mg2BfZqP1Su1J9RrtSl_RvSOACgSzyDOjdN41RQfLZ1l73G45wat0sKwBMGBNpu-oJD22xY6GPtVeKj2QPEY3ss4xArJJsXIAEay_QMWavx1HMMsrfTASyWNdyZ0cin_S10hDSqqXbkTZHyB-FqDcudkNVM0s7xKEDbe8cFWCh_DPEMreN2DMA_PmoZTYaCSg6fviP"/>
+<span class="font-headline-sm text-lg sm:text-xl font-bold tracking-tight text-on-surface">iRAV</span>
+</a>
+<!-- Centered Status Pill -->
+<div class="flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-surface-container-high/80 border border-outline-variant/30 text-xs sm:text-sm text-on-surface-variant font-medium shadow-[0_1px_2px_rgba(0,0,0,0.03)] mx-auto">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="hidden sm:inline">Next-Gen Intelligent EV Infrastructure</span>
+<span class="sm:hidden">Next-Gen EV Infra</span>
+</div>
+<!-- Right spacer to balance center alignment -->
+<div class="w-16 sm:w-24 shrink-0"></div>
+</div>
+</header>
+<main class="w-full pt-16 bg-surface overflow-x-hidden">
+<div class="flex flex-col w-full text-on-surface">
+<!-- 2. HERO SECTION -->
+<section class="relative w-full pt-10 sm:pt-16 pb-12 sm:pb-20 overflow-hidden" id="hero-section">
+<div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none" id="hero-bg-container">
+<img alt="iRAV Architectural EV Infrastructure" class="absolute -top-[10%] left-0 w-full h-[120%] min-h-[120%] object-cover object-center z-0 opacity-40 sm:opacity-75 scale-105 will-change-transform" decoding="sync" id="hero-parallax-bg" loading="eager" src="https://lh3.googleusercontent.com/aida/ALJJyrCl_vqvFWA4hU8hJ-fdaG15rH9cDHxTcl6RwXe3TXgnjuVMCEGVjVMbmfo3ot6U-qFvKVF-RVRA9bXtWleQjMzUZClwt2onucTmuYy97sS2QP0BtUNJjB34h-0FeC8U2PuogVt-fjOTFjNcEPyK4ocMGJ5BTopPHjMeiQf-Rk7XL5cV054eoPBovuw_m6dl-WCtebrbxTpOFIOdnCcTyTb-fM9RdnxZyecu5GDOsFs8Gw"/>
+<div class="absolute inset-0 bg-gradient-to-b from-[#fcf8fb]/70 via-[#fcf8fb]/85 to-[#fcf8fb] pointer-events-none"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
+<!-- Overline Pill -->
+<div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1 rounded-full bg-surface-container-high/80 border border-outline-variant/30 mb-4 sm:mb-6 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-xs sm:text-sm text-on-surface font-semibold tracking-wide">Next-Gen Intelligent EV Infrastructure</span>
+</div>
+<!-- Fluid Headline Typography -->
+<h1 class="font-display-lg text-3xl sm:text-5xl lg:text-6xl max-w-4xl font-extrabold text-on-surface tracking-tight leading-tight mb-4 sm:mb-6">
+Anxiety removed — powering the next mile. <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0071e3] to-[#34c759]">Effortlessly.</span>
+</h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-sm sm:text-base lg:text-lg text-on-surface-variant max-w-2xl mb-6 sm:mb-8 leading-relaxed px-2">
+Next-generation intelligent EV chargers engineered in India. Seamless solar integration, military-grade thermal telemetry, and instantaneous cloud analytics.
+</p>
+<!-- Clean CTAs responsive stacking on mobile -->
+<div class="w-full sm:w-auto flex flex-col sm:flex-row gap-3 justify-center items-center mb-10 sm:mb-14">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary-container text-white text-sm font-semibold shadow-md hover:brightness-105 active:scale-95 transition-all" href="#solutions">
+Explore Chargers
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-1 px-6 py-3 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold border border-outline-variant/30 hover:bg-surface-container transition-all" href="#configurator">
+<span>Configure Custom kW</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</a>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface text-xs font-semibold shadow-sm border border-outline-variant/20 hover:bg-surface-container-high transition-all" onclick="downloadPageSource()">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span>
+<span>Export Source</span>
+</button>
+</div>
+<!-- Hardware Showcase Centerpiece (ARKIN Wallbox Image 54) -->
+<div class="relative w-full max-w-4xl flex items-center justify-center py-2 sm:py-4">
+<div class="absolute w-72 sm:w-[480px] h-72 sm:h-[480px] bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto bg-surface-container-lowest rounded-2xl sm:rounded-3xl shadow-xl p-3 sm:p-5 border border-outline-variant/30 overflow-hidden flex flex-col items-center">
+<div class="w-full relative rounded-xl sm:rounded-2xl overflow-hidden bg-surface-container-low flex items-center justify-center aspect-video sm:aspect-[4/3]">
+<img alt="ARKIN Wallbox Charger" class="w-full h-full object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida/ALJJyrCFqOPyq4hTOxTOnOcR4tMLmQs23JljgcNyeG2DypPxrnkJCfm466L-ffcOWX-YpaA5VmA-VQmi1W_63CcNoSBzQkhJMT663NR66pXWsfkT8WaHw-BWRq_3Ir1YtKkUsj3cj059WYDZAK4NTycoQANd1fpi_bf8laSlnDAj9SRaUO27NmoC10xR2OLwJP8ImAzeNnwo3ZOoCEyAyba-ppE52czF3dHNu0kH9RtfX_vlAw"/>
+<!-- Float Badges with fluid placement -->
+<div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-md shadow-sm border border-black/5 text-[10px] sm:text-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+<span>99.4% Eff</span>
+</div>
+<div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-md shadow-sm border border-black/5 text-[10px] sm:text-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">shield</span>
+<span>IP65 Tested</span>
+</div>
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 w-[92%] sm:w-auto flex items-center justify-center gap-1.5 px-3 py-1 rounded-full bg-white/95 dark:bg-black/85 backdrop-blur-md shadow-md border border-black/5 text-[10px] sm:text-xs text-on-surface font-medium truncate">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping shrink-0"></span>
+<span class="truncate">OCPP 2.0.1+ Active Telemetry</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Metrics Bar (Responsive Grid) -->
+<div class="w-full max-w-5xl mt-8 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 bg-surface-container-low/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-outline-variant/20 text-left">
+<div class="flex flex-col p-2">
+<span class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">1,000+</span>
+<span class="text-xs sm:text-sm text-on-surface-variant font-medium mt-0.5">Deployments Nationwide</span>
+</div>
+<div class="flex flex-col p-2">
+<span class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">200k+</span>
+<span class="text-xs sm:text-sm text-on-surface-variant font-medium mt-0.5">Sessions Logged</span>
+</div>
+<div class="flex flex-col p-2">
+<span class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">38+</span>
+<span class="text-xs sm:text-sm text-on-surface-variant font-medium mt-0.5">Cities Across India</span>
+</div>
+<div class="flex flex-col p-2">
+<span class="text-2xl sm:text-3xl font-extrabold text-secondary tracking-tight">903 T</span>
+<span class="text-xs sm:text-sm text-secondary font-semibold mt-0.5">CO₂-e Clean Offset</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. COMPARE iRAV CHARGERS (3-Model Lineup, 11 kW Most Popular) -->
+<section class="relative w-full py-12 sm:py-20 bg-surface-bright" id="solutions">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4">
+<div>
+<span class="text-xs sm:text-sm font-bold tracking-wider text-primary uppercase">Modular Portfolio</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface mt-1">Compare iRAV Chargers.</h2>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1 max-w-xl">Engineered to match every duty cycle from residential carports to high-throughput highway plazas.</p>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<span class="text-xs sm:text-sm text-on-surface-variant">Need guidance?</span>
+<button class="text-xs sm:text-sm text-primary font-bold hover:underline inline-flex items-center gap-1" onclick="openQuoteModal('General Solutions')">Speak with an EV Engineer &gt;</button>
+</div>
+</div>
+<!-- 3-Column Responsive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<!-- Card 1: ARKIN Pro -->
+<div class="group bg-surface-container-lowest/90 backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between border border-outline-variant/30 hover:border-primary/40 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Residential &amp; Work</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-medium">AC 230V / 415V</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mt-2.5">ARKIN Pro</h3>
+<div class="text-2xl sm:text-3xl text-primary font-extrabold mt-1">7.4 kW / 22 kW</div>
+<p class="text-xs text-on-surface-variant mt-2 leading-relaxed">High-speed home &amp; workplace charger with dynamic solar load balancing.</p>
+<div class="mt-5 space-y-2.5 text-xs text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Type 2 tethered 5m cable harness</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>RFID + NFC tap authorization</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>OCPP 1.6J / 2.0.1 smart load balancing</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Triad solar net-metering sync</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex flex-col gap-3">
+<div class="flex items-baseline justify-between">
+<span class="text-xs text-on-surface-variant">Price</span>
+<span class="text-xl font-bold text-on-surface">₹48,500</span>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary-container text-white text-xs sm:text-sm font-semibold hover:brightness-105 active:scale-95 transition-all shadow-sm" onclick="openQuoteModal('ARKIN Pro (7.4 kW / 22 kW)')">
+Get Quote
+</button>
+</div>
+</div>
+<!-- Card 2: ARKIN Plus (11 kW - Most Popular) -->
+<div class="group bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between border-2 border-[#0071e3]/30 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-primary-container text-white text-[11px] font-bold tracking-wide shadow-sm z-20">
+  Most Popular
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Commercial &amp; Fleets</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-medium">3-Phase 415V</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mt-2.5">ARKIN Plus</h3>
+<div class="text-2xl sm:text-3xl text-primary font-extrabold mt-1">11 kW</div>
+<p class="text-xs text-on-surface-variant mt-2 leading-relaxed">Three-phase balanced AC charging designed for commercial parking &amp; depot hubs.</p>
+<div class="mt-5 space-y-2.5 text-xs text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Type 2 heavy duty gun connector</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Multi-tenant QR billing &amp; UPI engine</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Dual GSM 4G fallback connectivity</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>AI predictive thermal throttling</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex flex-col gap-3">
+<div class="flex items-baseline justify-between">
+<span class="text-xs text-on-surface-variant">Price</span>
+<span class="text-xl font-bold text-on-surface">₹72,000</span>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary-container text-white text-xs sm:text-sm font-semibold hover:brightness-105 active:scale-95 transition-all shadow-sm" onclick="openQuoteModal('ARKIN Plus 11 kW')">
+Get Quote
+</button>
+</div>
+</div>
+<!-- Card 3: Ultra DC Hub -->
+<div class="group bg-surface-container-lowest/90 backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between border border-outline-variant/30 hover:border-secondary/40 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Highways &amp; Plazas</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">DC Fast</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mt-2.5">Ultra DC Hub</h3>
+<div class="text-2xl sm:text-3xl text-on-surface font-extrabold mt-1">180 kW</div>
+<p class="text-xs text-on-surface-variant mt-2 leading-relaxed">Dual gun liquid-cooled fast highway dispenser for express corridors and bus depots.</p>
+<div class="mt-5 space-y-2.5 text-xs text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Dual CCS2 guns with dynamic split</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>10% to 80% recharge in under 20 mins</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>Liquid-cooled high voltage harness</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">check_circle</span>
+<span>OCPP 2.0.1 ISO 15118 Plug&amp;Charge</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex flex-col gap-3">
+<div class="flex items-baseline justify-between">
+<span class="text-xs text-on-surface-variant">Price</span>
+<span class="text-xl font-bold text-on-surface">Custom Quote</span>
+</div>
+<button class="w-full py-2.5 rounded-full bg-on-surface text-surface text-xs sm:text-sm font-semibold hover:opacity-90 active:scale-95 transition-all shadow-sm" onclick="openQuoteModal('Ultra DC 180 kW')">
+Request Spec
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. FLEET POWER CONFIGURATOR (Interactive Battery Capacity + Charging Time calculation) -->
+<section class="relative w-full py-12 sm:py-20 bg-surface" id="configurator">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-8 sm:mb-12">
+<span class="text-xs sm:text-sm font-bold tracking-wider text-primary uppercase">Bespoke Engineering</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface mt-1">Configure your fleet power.</h2>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1">Select your exact output capacity, vehicle battery size, gun topologies, and green solar coupling to generate immediate engineering parameters.</p>
+</div>
+<!-- Responsive grid: stacked on mobile, 2-column side-by-side on desktop (lg:grid-cols-12 gap-8) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Controls Column (7 cols) -->
+<div class="lg:col-span-7 space-y-6 bg-surface-container-lowest/95 backdrop-blur-md p-5 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30">
+<!-- 1. Power Rating (Includes 360 kW Megawatt/Heavy Fleet option in a clean 6-item responsive grid) -->
+<div>
+<div class="flex items-center justify-between mb-3">
+<label class="text-sm font-bold text-on-surface">1. Choose Power Rating</label>
+<span class="text-xs font-bold text-primary transition-all duration-300" id="selected-kw-badge">60 kW Selected</span>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5 sm:gap-2 p-1.5 bg-surface-container-low rounded-xl" id="kw-selector-group">
+<button class="kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-transparent text-on-surface hover:text-primary" onclick="selectKw(22)" type="button">22 kW</button>
+<button class="kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-transparent text-on-surface hover:text-primary" onclick="selectKw(30)" type="button">30 kW</button>
+<button class="kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-primary-container text-white shadow-sm" onclick="selectKw(60)" type="button">60 kW</button>
+<button class="kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-transparent text-on-surface hover:text-primary" onclick="selectKw(120)" type="button">120 kW</button>
+<button class="kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-transparent text-on-surface hover:text-primary" onclick="selectKw(240)" type="button">240 kW</button>
+<button class="kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-transparent text-on-surface hover:text-primary" onclick="selectKw(360)" title="Megawatt / Heavy Fleet" type="button">360 kW+</button>
+</div>
+</div>
+<!-- 2. Vehicle Battery Capacity (kWh) with Interactive Range Slider & Textbox Synchronization -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<label class="text-sm font-bold text-on-surface" for="battery-capacity-input">2. Vehicle Battery Capacity (kWh)</label>
+<span class="text-xs text-on-surface-variant font-medium">Recharge delta: 10% → 80% (70%)</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all pr-16" id="battery-capacity-input" max="200" min="15" oninput="onBatteryInput()" placeholder="e.g. 40" step="1" type="number" value="40"/>
+<span class="absolute right-4 text-xs font-bold text-on-surface-variant pointer-events-none">kWh</span>
+</div>
+<!-- Apple-grade Minimalist Interactive Range Slider -->
+<div class="mt-3.5 px-1">
+<div class="relative flex items-center">
+<input aria-label="Vehicle battery capacity range slider" class="w-full h-2 bg-surface-container-high rounded-full appearance-none cursor-pointer accent-[#0071e3] transition-all focus:outline-none focus:ring-2 focus:ring-primary/30" id="battery-capacity-slider" max="200" min="15" oninput="onBatterySliderInput()" step="1" type="range" value="40"/>
+</div>
+<div class="flex justify-between items-center text-[11px] text-on-surface-variant font-medium mt-1.5 px-0.5">
+<span>15 kWh</span>
+<span class="text-xs font-semibold text-primary" id="slider-current-kwh">40 kWh</span>
+<span>200 kWh</span>
+</div>
+</div>
+<!-- Quick Presets -->
+<div class="flex flex-wrap items-center gap-2 mt-2.5">
+<span class="text-[11px] text-on-surface-variant font-medium">Popular EV Packs:</span>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-container hover:bg-primary-container hover:text-white transition-all text-on-surface" onclick="setBatteryPreset(40)" type="button">40 kWh</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-container hover:bg-primary-container hover:text-white transition-all text-on-surface" onclick="setBatteryPreset(60)" type="button">60 kWh</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-container hover:bg-primary-container hover:text-white transition-all text-on-surface" onclick="setBatteryPreset(75)" type="button">75 kWh</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-container hover:bg-primary-container hover:text-white transition-all text-on-surface" onclick="setBatteryPreset(100)" type="button">100 kWh</button>
+</div>
+</div>
+<!-- 3. Connector Setup -->
+<div>
+<label class="block text-sm font-bold text-on-surface mb-2.5">3. Dispenser Connector Setup</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="cursor-pointer p-3.5 rounded-xl bg-surface-container-low border border-transparent flex items-center justify-between transition-all hover:bg-surface-container" id="opt-gun-single" onclick="selectGuns('single')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">ev_station</span>
+<div>
+<div class="text-xs sm:text-sm font-bold text-on-surface">Single Gun</div>
+<div class="text-[11px] text-on-surface-variant">Dedicated single bay</div>
+</div>
+</div>
+<span class="gun-radio-indicator w-3.5 h-3.5 rounded-full bg-surface-container-highest"></span>
+</div>
+<div class="cursor-pointer p-3.5 rounded-xl bg-primary/10 border border-[#0071e3]/30 shadow-sm flex items-center justify-between transition-all" id="opt-gun-dual" onclick="selectGuns('dual')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">charging_station</span>
+<div>
+<div class="text-xs sm:text-sm font-bold text-on-surface">Dual Gun Dynamic</div>
+<div class="text-[11px] text-on-surface-variant">Simultaneous split-share</div>
+</div>
+</div>
+<span class="gun-radio-indicator w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-container/20"></span>
+</div>
+</div>
+</div>
+<!-- 4. Form Factor -->
+<div>
+<label class="block text-sm font-bold text-on-surface mb-2.5">4. Chassis Form Factor</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="cursor-pointer p-3.5 rounded-xl bg-surface-container-low border border-transparent flex items-center justify-between transition-all hover:bg-surface-container" id="opt-mount-wall" onclick="selectMount('wallbox')">
+<div>
+<div class="text-xs sm:text-sm font-bold text-on-surface">Wallbox Architecture</div>
+<div class="text-[11px] text-on-surface-variant">Flush mount rear ducting</div>
+</div>
+<span class="mount-radio-indicator w-3.5 h-3.5 rounded-full bg-surface-container-highest"></span>
+</div>
+<div class="cursor-pointer p-3.5 rounded-xl bg-primary/10 border border-[#0071e3]/30 shadow-sm flex items-center justify-between transition-all" id="opt-mount-ped" onclick="selectMount('pedestal')">
+<div>
+<div class="text-xs sm:text-sm font-bold text-on-surface">Pedestal Floor Kiosk</div>
+<div class="text-[11px] text-on-surface-variant">Stainless steel bollard</div>
+</div>
+<span class="mount-radio-indicator w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-container/20"></span>
+</div>
+</div>
+</div>
+<!-- 5. Solar Triad Coupling Toggle -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">solar_power</span>
+</div>
+<div>
+<div class="text-xs sm:text-sm font-bold text-on-surface">Solar Triad Coupling</div>
+<div class="text-[11px] text-on-surface-variant">Syncs real-time with on-premise PV &amp; BESS</div>
+</div>
+</div>
+<button class="w-11 h-6 rounded-full bg-secondary transition-all relative flex items-center p-0.5 focus:outline-none shrink-0" id="solar-toggle" onclick="toggleSolar()" type="button">
+<span class="w-5 h-5 rounded-full bg-white shadow-md translate-x-5 transition-transform" id="solar-toggle-circle"></span>
+</button>
+</div>
+</div>
+<!-- Telemetry Spec Preview (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest/95 backdrop-blur-md p-5 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/20 mb-5">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Live Telemetry Preview</span>
+<h4 class="text-lg sm:text-xl font-bold text-on-surface transition-all" id="preview-title">iRAV Custom 60 kW</h4>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">Active Spec</span>
+</div>
+<!-- Output Bar Gauge (Scaled up to 360 kW maximum to accommodate ultra-fast megawatt class) -->
+<div class="bg-surface-container-low rounded-xl p-3.5 sm:p-4 mb-5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-on-surface-variant">Continuous Output</span>
+<span class="text-sm font-bold text-primary transition-all" id="meter-kw-label">60 kW Max</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500 ease-out" id="meter-bar" style="width: 16.7%;"></div>
+</div>
+<div class="flex justify-between items-center mt-2 text-[11px] text-on-surface-variant font-medium">
+<span>0 kW</span>
+<span id="meter-efficiency-label">99.2% Efficiency</span>
+<span>360 kW</span>
+</div>
+</div>
+<!-- Checklist -->
+<div class="space-y-3.5 text-xs sm:text-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">timer</span>
+<div>
+<div class="text-[11px] text-on-surface-variant">Est. Charging Time (10% to 80%)</div>
+<div class="font-bold text-on-surface text-sm sm:text-base text-primary" id="spec-time">~28 mins</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5" id="spec-battery-subtext">Based on 40 kWh battery (28.0 kWh energy transferred)</div>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">electrical_services</span>
+<div>
+<div class="text-[11px] text-on-surface-variant">Grid Input Voltage &amp; Service</div>
+<div class="font-medium text-on-surface" id="spec-phase">415V 3-Phase AC (100A Service)</div>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0">energy_savings_leaf</span>
+<div>
+<div class="text-[11px] text-on-surface-variant">Renewable Solar PV Offset</div>
+<div class="font-medium text-secondary" id="spec-solar">Enabled (Direct DC-coupled or AC bus synch)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20">
+<button class="w-full py-3 rounded-full bg-primary-container text-white text-xs sm:text-sm font-semibold shadow-sm hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-2" onclick="openConfigQuote()">
+<span>Request Custom Build Spec</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<p class="text-[11px] text-center text-on-surface-variant mt-2">Comprehensive CAD drawings and single-line diagram delivered within 24 hours.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. CLEAN MOBILITY & ZERO-GRID-PENALTY MICROGRID (The Triad Loop) -->
+<section class="relative w-full py-12 sm:py-20 bg-surface-bright" id="environment">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-8 sm:mb-12">
+<span class="text-xs sm:text-sm font-bold tracking-wider text-secondary uppercase">Quiet Responsibility</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface mt-1">Clean mobility meets clean generation.</h2>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1">Charging with dirty grid electricity only shifts emissions. iRAV units orchestrate power routing directly with zero-emission local solar arrays.</p>
+</div>
+<!-- Responsive 2-Column Layout (grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-stretch">
+<!-- Left: Carbon Telemetry -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-5 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-secondary mb-3">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+<span class="text-xs font-bold uppercase tracking-wider">Carbon Telemetry</span>
+</div>
+<div class="text-4xl sm:text-5xl font-extrabold text-secondary tracking-tight">
+903<span class="text-2xl font-semibold">T+</span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1 leading-relaxed">
+Verified metric tons of carbon emissions prevented across iRAV active stations to date.
+</p>
+<!-- Fleet Slider Calculator -->
+<div class="mt-6 p-4 rounded-xl bg-surface-container-low space-y-3">
+<div>
+<div class="flex justify-between items-center text-xs font-semibold mb-1.5">
+<span class="text-on-surface">Fleet Size (Vehicles)</span>
+<span class="text-primary font-bold" id="fleet-count-display">15 EVs</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-highest rounded-lg cursor-pointer" id="fleet-range" max="100" min="1" oninput="calcImpact()" type="range" value="15"/>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<div class="text-[11px] text-on-surface-variant">Annual CO₂ Saved</div>
+<div class="text-base sm:text-lg font-bold text-secondary" id="annual-co2-display">48.6 Tons</div>
+</div>
+<div class="text-right">
+<div class="text-[11px] text-on-surface-variant">Annual Fuel Saved</div>
+<div class="text-base sm:text-lg font-bold text-on-surface" id="annual-fuel-display">₹11.8 Lakh</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-3 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Audited under Greenhouse Gas Protocol Scope 2</span>
+</div>
+</div>
+<!-- Right: Zero-Grid-Penalty Microgrid Integration -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-5 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+<span class="text-xs font-bold uppercase tracking-wider">The Triad Loop</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-container text-[11px] font-bold">Active Self-Balancing</span>
+</div>
+<h3 class="text-lg sm:text-xl font-bold text-on-surface">Zero-Grid-Penalty Microgrid Integration</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1.5 leading-relaxed">
+Every iRAV commercial dispenser communicates in 200ms intervals with local solar PV inverters and battery energy storage (BESS) to guarantee zero penalty peak-demand draw.
+</p>
+<!-- Responsive Architecture Flow Cards (Rooftop Solar, iRAV Triad, Clean EV Dispenser) -->
+<div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-center">
+<!-- Node 1 -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 flex sm:flex-col items-center justify-between sm:justify-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">solar_power</span>
+</div>
+<div class="text-left sm:text-center">
+<div class="text-xs font-bold text-on-surface">Rooftop Solar PV</div>
+<div class="text-[10px] text-on-surface-variant">Instant PV Surplus</div>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="p-3 rounded-xl bg-primary/10 border border-primary-container/30 flex sm:flex-col items-center justify-between sm:justify-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div class="text-left sm:text-center">
+<div class="text-xs font-bold text-primary">iRAV Triad Core</div>
+<div class="text-[10px] text-secondary font-semibold">100% Green Priority</div>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 flex sm:flex-col items-center justify-between sm:justify-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">ev_station</span>
+</div>
+<div class="text-left sm:text-center">
+<div class="text-xs font-bold text-on-surface">Clean EV Dispenser</div>
+<div class="text-[10px] text-on-surface-variant">Zero-Penalty kWh</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Metrics -->
+<div class="mt-6 grid grid-cols-3 gap-2 text-center pt-2">
+<div class="p-2 sm:p-2.5 rounded-xl bg-surface-container-low">
+<span class="block text-base sm:text-lg font-bold text-on-surface">0 kW</span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant">Peak Penalty</span>
+</div>
+<div class="p-2 sm:p-2.5 rounded-xl bg-surface-container-low">
+<span class="block text-base sm:text-lg font-bold text-secondary">100%</span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant">Solar Usage</span>
+</div>
+<div class="p-2 sm:p-2.5 rounded-xl bg-surface-container-low">
+<span class="block text-base sm:text-lg font-bold text-on-surface">&lt; 200ms</span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant">Switch Latency</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. FIELD RELIABILITY & TORTURE TESTS WALKTHROUGHS -->
+<section class="w-full py-12 sm:py-20 bg-surface" id="reels">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4">
+<div>
+<span class="text-xs sm:text-sm font-bold tracking-wider text-primary uppercase">Field Reliability</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface mt-1">In the Field. Torture Tests &amp; Walkthroughs.</h2>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1">No renders. See how iRAV hardware endures monsoon torrents, 50°C heat, and high-frequency depot usage.</p>
+</div>
+<a class="inline-flex items-center gap-1 text-xs sm:text-sm text-primary font-bold hover:underline self-start sm:self-auto" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span>Follow @irav.charging on Instagram</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+<!-- Responsive Grid: 1 col on mobile, 2 on tablet, 3 on desktop -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<!-- Reel 1: Water Test using IMAGE_51 -->
+<div class="group cursor-pointer bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col border border-outline-variant/20" onclick="openReelModal('IP65 Torrential Water Jet &amp; Submersion Torture Test', '42.8k views')">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-high">
+<img alt="EV charger torture water resistance IP65 test" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ALJJyrDH2mhMyfaN7nVx4MIUrwxv1PdQSl9HD4UQqQ-W6Mj3xySJH0UcQFHWWYaRIuAxg40AFNA7RslOv43cYeZVIq3XAhTS2d358uBSJrgnwOLgQ40bUzTOE0q5vOaq4Jeq34J7C9LG6oK6PrV2zh8E9yDLa-pwQcrhNZqiudgOsZkbYbNF7Fb8uXbX_1wl5b-Cgmf1KyKM8vy3HtLa6AwggAZd6UZtHSQQnYq-2rYeW7JE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-md text-[11px] font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Lab Test 09</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md shadow-md flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px] ml-0.5">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<div class="flex items-center gap-1.5 text-[11px] opacity-90 mb-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>42.8k views</span>
+</div>
+<h4 class="text-sm font-bold leading-snug line-clamp-2">IP65 Torrential Water Jet &amp; Submersion Torture Test</h4>
+</div>
+</div>
+<div class="p-3.5 flex items-center justify-between text-xs text-on-surface-variant">
+<span>ARAI Compliance Lab, Pune</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Reel 2: Fast Commissioning using IMAGE_53 -->
+<div class="group cursor-pointer bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col border border-outline-variant/20" onclick="openReelModal('3-Minute Commercial Fleet Install &amp; Commissioning Walkthrough', '89.2k views')">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-high">
+<img alt="Automotive technician installing EV charger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ALJJyrBNxXbbRZYrtVykIxHn-a3H2cou05yhY7XpZoMuE_OIHko4M_hAXv7DtJ943OpFhSi4_0h-K0jCc87ts0Rv4ivDbAvGkQzn_62ceNRk2OLmEDF1ZBIpk1YYWyf2vqdJMvitBh9R1cKPpSE43-Xces8U_NGaYosXETl4Rvg-aj9Jby3czH7GQI7oJ7m8LNR68sVtc4dz0aUNdczrULBJdS7OJlQ3eJ5OQhXZz1VxUNWp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-md text-[11px] font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Field Deploy</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md shadow-md flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px] ml-0.5">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<div class="flex items-center gap-1.5 text-[11px] opacity-90 mb-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>89.2k views</span>
+</div>
+<h4 class="text-sm font-bold leading-snug line-clamp-2">3-Minute Commercial Fleet Install &amp; Commissioning</h4>
+</div>
+</div>
+<div class="p-3.5 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Live installation at BluSmart Hub</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Reel 3: Thermal Stress -->
+<div class="group cursor-pointer bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col border border-outline-variant/20 sm:col-span-2 lg:col-span-1" onclick="openReelModal('55°C Ambient Thermal Stress &amp; De-rating Test', '31.4k views')">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-high">
+<img alt="Thermal Chamber Stress Test" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANF2XYBgxZhXhy6CQBzHTAAwPU_GkDyZxHMK0PbdWBV1SMqzVv1xOLmbg6_NY-7vJPQJFJ8wiplCwSeoYVTWRKb5Zd5N2tyN460wr9LPzpj-hfcyW5Je5zptzIZS7H73egwP3l4c-DttiTTXFRp6wagSLdi33C8KoT9rTb0-4I2O1UMSJ-eSf1O6_8qPHoisecW_BeXL_wfHxQLFrT_nnA3ntEc-drENzeSv3WlABu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-md text-[11px] font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Extreme Heat</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md shadow-md flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px] ml-0.5">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<div class="flex items-center gap-1.5 text-[11px] opacity-90 mb-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>31.4k views</span>
+</div>
+<h4 class="text-sm font-bold leading-snug line-clamp-2">55°C Indian Summer Ambient Heat Stress &amp; De-rating</h4>
+</div>
+</div>
+<div class="p-3.5 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Validated zero thermal drop at 50°C</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FOOTER (Multi-column responsive grid) -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/20 shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-outline-variant/20">
+<!-- Directory 1 -->
+<div>
+<h5 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3">Chargers</h5>
+<ul class="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#solutions">ARKIN Pro (7.4 / 22 kW)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#solutions">ARKIN Plus (11 kW)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#solutions">Ultra DC Hub (180 kW)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#configurator">Custom Fleet Builds</a></li>
+</ul>
+</div>
+<!-- Directory 2 -->
+<div>
+<h5 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3">Technology</h5>
+<ul class="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#environment">Solar Triad Integration</a></li>
+<li><a class="hover:text-primary transition-colors" href="#environment">Dynamic Load Management</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">OCPP 2.0.1 Cloud OS</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Thermal Telemetry</a></li>
+</ul>
+</div>
+<!-- Directory 3 -->
+<div>
+<h5 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3">Company</h5>
+<ul class="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About iRAV Technologies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Partner Network</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability 2024</a></li>
+</ul>
+</div>
+<!-- Directory 4: Office & Contact -->
+<div>
+<h5 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3">Pune Innovation Center</h5>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-3">
+Baner Tech Park, High Street Road,<br/>
+Pune 411045, Maharashtra, India.
+</p>
+<div class="space-y-1 text-xs text-on-surface-variant">
+<div>Email: <a class="text-primary hover:underline" href="mailto:contact@irav.in">contact@irav.in</a></div>
+<div>Phone: <a class="hover:text-on-surface transition-colors" href="tel:+912049108800">+91 20 4910 8800</a></div>
+</div>
+</div>
+</div>
+<!-- Bottom bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
+<div class="flex items-center gap-2">
+<img alt="iRAV Logo" class="h-5 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCFdytr2zK6DdHrDqIFY_PaZL8D0G5h16Qhi1mg2BfZqP1Su1J9RrtSl_RvSOACgSzyDOjdN41RQfLZ1l73G45wat0sKwBMGBNpu-oJD22xY6GPtVeKj2QPEY3ss4xArJJsXIAEay_QMWavx1HMMsrfTASyWNdyZ0cin_S10hDSqqXbkTZHyB-FqDcudkNVM0s7xKEDbe8cFWCh_DPEMreN2DMA_PmoZTYaCSg6fviP"/>
+<span class="text-sm font-bold text-on-surface">iRAV</span>
+<span class="text-xs text-on-surface-variant">(irav.in)</span>
+<span class="text-xs text-on-surface-variant ml-2">© 2024 iRAV Technologies. Quiet engineering, clean mobility.</span>
+</div>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FLOATING WHATSAPP BUTTON (Responsive) -->
+<aside aria-label="Support Options" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40">
+<a class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full bg-secondary-container text-on-secondary-container shadow-lg hover:brightness-105 active:scale-95 transition-all text-xs sm:text-sm font-semibold" href="https://wa.me/912049108800?text=Hello%20iRAV,%20I'd%20like%20to%20consult%20an%20EV%20engineer%20about%20charging%20hardware" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="hidden sm:inline">Chat with an EV Engineer</span>
+<span class="sm:hidden">Chat</span>
+</a>
+</aside>
+<!-- INTERACTIVE QUOTE MODAL -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" id="quote-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-5 sm:p-7 shadow-xl relative max-h-[90vh] overflow-y-auto border border-outline-variant/30">
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeQuoteModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<div class="mb-4">
+<span class="text-[11px] text-primary uppercase font-bold tracking-wider">iRAV Hardware Consultation</span>
+<h3 class="text-xl font-bold text-on-surface mt-1">Get an Engineering Quote</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Direct from our Pune manufacturing hub with full commercial BOQ specification.</p>
+</div>
+<form class="space-y-3" id="quote-form" onsubmit="handleQuoteSubmit(event)">
+<div>
+<label class="block text-xs font-semibold text-on-surface mb-1">Target Power Configuration</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface text-xs outline-none" id="modal-charger-field" readonly="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-semibold text-on-surface mb-1">Project Type</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-xs outline-none">
+<option>Commercial Fleet Hub</option>
+<option>Residential Villa / Society</option>
+<option>Highway Public Plaza</option>
+<option>Corporate Office Park</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-on-surface mb-1">Location / State</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-xs outline-none" placeholder="e.g. Pune / Mumbai" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-on-surface mb-1">Full Name</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-xs outline-none" placeholder="Aarav Mehta" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-semibold text-on-surface mb-1">Mobile (+91)</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-xs outline-none" placeholder="98200 12345" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-on-surface mb-1">Email</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-xs outline-none" placeholder="name@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-2.5 rounded-full bg-primary-container text-white text-xs sm:text-sm font-semibold shadow-sm hover:brightness-105 transition-all" id="submit-quote-btn" type="submit">
+Submit Consultation Request
+</button>
+</div>
+<p class="text-[11px] text-center text-on-surface-variant">We sign NDAs for proprietary fleet topologies. No promotional spam.</p>
+</form>
+<div class="hidden text-center py-6" id="quote-success">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container mx-auto flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+<h4 class="text-lg font-bold text-on-surface">Request Dispatched</h4>
+<p class="text-xs text-on-surface-variant mt-1">An iRAV technical applications engineer will contact you within 2 business hours.</p>
+<button class="mt-4 px-5 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold" onclick="closeQuoteModal()">Close Window</button>
+</div>
+</div>
+</div>
+<!-- VIDEO SIMULATION MODAL -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/60 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" id="reel-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-sm w-full p-4 shadow-xl relative flex flex-col items-center border border-outline-variant/30">
+<button class="absolute top-3 right-3 w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeReelModal()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<div class="w-full aspect-[9/16] rounded-xl bg-on-surface flex flex-col items-center justify-center relative overflow-hidden mb-3 text-surface">
+<div class="w-12 h-12 rounded-full bg-surface/20 backdrop-blur-md flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-[28px]">play_arrow</span>
+</div>
+<p class="text-xs text-center mt-2 px-3 opacity-80" id="reel-modal-caption">Playing video feed...</p>
+</div>
+<div class="w-full flex items-center justify-between">
+<div>
+<div class="text-xs font-bold text-on-surface" id="reel-modal-title">Video Title</div>
+<div class="text-[11px] text-on-surface-variant" id="reel-modal-stats">Metrics</div>
+</div>
+<a class="px-3 py-1 rounded-full bg-surface-container text-xs text-primary font-semibold hover:bg-surface-container-high transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank">Open App</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+  // Parallax Scroll Listener
+  let isTicking = false;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function updateParallax() {
+    if (prefersReducedMotion.matches) return;
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const heroBg = document.getElementById('hero-parallax-bg');
+    const heroSection = document.getElementById('hero-section');
+    if (heroBg && heroSection) {
+      const heroRect = heroSection.getBoundingClientRect();
+      if (heroRect.bottom >= 0) {
+        const heroOffset = scrollY * 0.2;
+        heroBg.style.transform = `translate3d(0, ${heroOffset.toFixed(1)}px, 0) scale(1.05)`;
+      }
+    }
+    isTicking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(updateParallax);
+      isTicking = true;
+    }
+  }, { passive: true });
+
+  // Configurator Logic
+  let configState = {
+    kw: 60,
+    batteryKwh: 40,
+    guns: 'dual',
+    mount: 'pedestal',
+    solar: true
+  };
+
+  const kwData = {
+    22: { phase: '415V 3-Phase AC (32A)', efficiency: '99.4%', width: '6.1%' },
+    30: { phase: '415V 3-Phase AC (50A)', efficiency: '99.3%', width: '8.3%' },
+    60: { phase: '415V 3-Phase AC (100A)', efficiency: '99.2%', width: '16.7%' },
+    120: { phase: '415V 3-Phase AC (200A)', efficiency: '99.1%', width: '33.3%' },
+    240: { phase: '415V 3-Phase Liquid Feed (400A)', efficiency: '98.9%', width: '66.7%' },
+    360: { phase: 'Dedicated Substation Feed 800V/1000V (600A+ Megawatt Architecture)', efficiency: '98.6%', width: '100%' }
+  };
+
+  // Dynamic Charging Time Calculator (10% to 80% = 70% Delta)
+  function updateChargingTime() {
+    const battery = parseFloat(configState.batteryKwh) || 0;
+    const kw = parseFloat(configState.kw) || 1;
+    const timeEl = document.getElementById('spec-time');
+    const subtextEl = document.getElementById('spec-battery-subtext');
+
+    if (battery <= 0) {
+      if (timeEl) timeEl.innerText = "--";
+      if (subtextEl) subtextEl.innerText = "Please enter valid battery capacity (kWh)";
+      return;
+    }
+
+    const energyDelta = (battery * 0.70); // 70% delta
+    const totalMinutes = Math.round((energyDelta / kw) * 60);
+
+    let formattedTime = "";
+    if (totalMinutes < 1) {
+      formattedTime = "< 1 min (Ultra Fast)";
+    } else if (totalMinutes < 60) {
+      formattedTime = `~${totalMinutes} mins`;
+    } else {
+      const hours = Math.floor(totalMinutes / 60);
+      const remainingMins = totalMinutes % 60;
+      if (remainingMins === 0) {
+        formattedTime = `~${hours}h (~${totalMinutes} mins)`;
+      } else {
+        formattedTime = `~${hours}h ${remainingMins}m (~${totalMinutes} mins)`;
+      }
+    }
+
+    if (timeEl) timeEl.innerText = formattedTime;
+    if (subtextEl) {
+      subtextEl.innerText = `Based on ${battery} kWh battery (${energyDelta.toFixed(1)} kWh energy transferred)`;
+    }
+  }
+
+  function syncBatteryUi(val) {
+    const sliderEl = document.getElementById('battery-capacity-slider');
+    const currentLabel = document.getElementById('slider-current-kwh');
+    if (sliderEl && !isNaN(val)) {
+      sliderEl.value = Math.min(200, Math.max(15, val));
+    }
+    if (currentLabel) {
+      currentLabel.innerText = (!isNaN(val) && val > 0) ? `${val} kWh` : '--';
+    }
+  }
+
+  function onBatteryInput() {
+    const inputVal = parseFloat(document.getElementById('battery-capacity-input').value);
+    configState.batteryKwh = isNaN(inputVal) ? 0 : inputVal;
+    syncBatteryUi(configState.batteryKwh);
+    updateChargingTime();
+  }
+
+  function onBatterySliderInput() {
+    const sliderVal = parseFloat(document.getElementById('battery-capacity-slider').value);
+    configState.batteryKwh = isNaN(sliderVal) ? 40 : sliderVal;
+    const inputEl = document.getElementById('battery-capacity-input');
+    if (inputEl) inputEl.value = configState.batteryKwh;
+    const currentLabel = document.getElementById('slider-current-kwh');
+    if (currentLabel) currentLabel.innerText = `${configState.batteryKwh} kWh`;
+    updateChargingTime();
+  }
+
+  function setBatteryPreset(val) {
+    configState.batteryKwh = val;
+    const inputEl = document.getElementById('battery-capacity-input');
+    if (inputEl) inputEl.value = val;
+    syncBatteryUi(val);
+    updateChargingTime();
+  }
+
+  function selectKw(val) {
+    configState.kw = val;
+
+    const buttons = document.querySelectorAll('.kw-btn');
+    const kwValues = [22, 30, 60, 120, 240, 360];
+    buttons.forEach((btn, index) => {
+      if (kwValues[index] === val) {
+        btn.className = "kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-primary-container text-white shadow-sm";
+      } else {
+        btn.className = "kw-btn py-2 sm:py-2.5 px-1 rounded-lg text-xs font-semibold text-center transition-all bg-transparent text-on-surface hover:text-primary";
+      }
+    });
+
+    const badge = document.getElementById('selected-kw-badge');
+    if (badge) {
+      badge.innerText = (val === 360 ? "360 kW Megawatt" : val + " kW") + " Selected";
+    }
+
+    const titleEl = document.getElementById('preview-title');
+    const labelEl = document.getElementById('meter-kw-label');
+    const phaseEl = document.getElementById('spec-phase');
+    const effEl = document.getElementById('meter-efficiency-label');
+    const barEl = document.getElementById('meter-bar');
+
+    if (titleEl) titleEl.innerText = val === 360 ? "iRAV Ultra Megawatt 360 kW+" : "iRAV Custom " + val + " kW";
+    if (labelEl) labelEl.innerText = val + " kW Max";
+    
+    const info = kwData[val];
+    if (info) {
+      if (phaseEl) phaseEl.innerText = info.phase;
+      if (effEl) effEl.innerText = info.efficiency + " Efficiency";
+      if (barEl) barEl.style.width = info.width;
+    }
+
+    updateChargingTime();
+  }
+
+  function selectGuns(type) {
+    configState.guns = type;
+    const singleCard = document.getElementById('opt-gun-single');
+    const dualCard = document.getElementById('opt-gun-dual');
+    const singleDot = singleCard.querySelector('.gun-radio-indicator');
+    const dualDot = dualCard.querySelector('.gun-radio-indicator');
+
+    if (type === 'single') {
+      singleCard.className = "cursor-pointer p-3.5 rounded-xl bg-primary/10 border border-[#0071e3]/30 shadow-sm flex items-center justify-between transition-all";
+      dualCard.className = "cursor-pointer p-3.5 rounded-xl bg-surface-container-low border border-transparent flex items-center justify-between transition-all hover:bg-surface-container";
+      singleDot.className = "gun-radio-indicator w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-container/20";
+      dualDot.className = "gun-radio-indicator w-3.5 h-3.5 rounded-full bg-surface-container-highest";
+    } else {
+      dualCard.className = "cursor-pointer p-3.5 rounded-xl bg-primary/10 border border-[#0071e3]/30 shadow-sm flex items-center justify-between transition-all";
+      singleCard.className = "cursor-pointer p-3.5 rounded-xl bg-surface-container-low border border-transparent flex items-center justify-between transition-all hover:bg-surface-container";
+      dualDot.className = "gun-radio-indicator w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-container/20";
+      singleDot.className = "gun-radio-indicator w-3.5 h-3.5 rounded-full bg-surface-container-highest";
+    }
+  }
+
+  function selectMount(type) {
+    configState.mount = type;
+    const wallCard = document.getElementById('opt-mount-wall');
+    const pedCard = document.getElementById('opt-mount-ped');
+    const wallDot = wallCard.querySelector('.mount-radio-indicator');
+    const pedDot = pedCard.querySelector('.mount-radio-indicator');
+
+    if (type === 'wallbox') {
+      wallCard.className = "cursor-pointer p-3.5 rounded-xl bg-primary/10 border border-[#0071e3]/30 shadow-sm flex items-center justify-between transition-all";
+      pedCard.className = "cursor-pointer p-3.5 rounded-xl bg-surface-container-low border border-transparent flex items-center justify-between transition-all hover:bg-surface-container";
+      wallDot.className = "mount-radio-indicator w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-container/20";
+      pedDot.className = "mount-radio-indicator w-3.5 h-3.5 rounded-full bg-surface-container-highest";
+    } else {
+      pedCard.className = "cursor-pointer p-3.5 rounded-xl bg-primary/10 border border-[#0071e3]/30 shadow-sm flex items-center justify-between transition-all";
+      wallCard.className = "cursor-pointer p-3.5 rounded-xl bg-surface-container-low border border-transparent flex items-center justify-between transition-all hover:bg-surface-container";
+      pedDot.className = "mount-radio-indicator w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-container/20";
+      wallDot.className = "mount-radio-indicator w-3.5 h-3.5 rounded-full bg-surface-container-highest";
+    }
+  }
+
+  function toggleSolar() {
+    configState.solar = !configState.solar;
+    const toggleBtn = document.getElementById('solar-toggle');
+    const circle = document.getElementById('solar-toggle-circle');
+    const solarSpec = document.getElementById('spec-solar');
+
+    if (configState.solar) {
+      toggleBtn.className = "w-11 h-6 rounded-full bg-secondary transition-all relative flex items-center p-0.5 focus:outline-none shrink-0";
+      circle.className = "w-5 h-5 rounded-full bg-white shadow-md translate-x-5 transition-transform";
+      solarSpec.innerText = "Enabled (Direct DC-coupled or AC bus synch)";
+      solarSpec.className = "font-medium text-secondary";
+    } else {
+      toggleBtn.className = "w-11 h-6 rounded-full bg-surface-container-highest transition-all relative flex items-center p-0.5 focus:outline-none shrink-0";
+      circle.className = "w-5 h-5 rounded-full bg-white shadow-md translate-x-0 transition-transform";
+      solarSpec.innerText = "Disabled (Standard Grid Sourcing Only)";
+      solarSpec.className = "font-medium text-on-surface-variant";
+    }
+  }
+
+  function calcImpact() {
+    const fleet = document.getElementById('fleet-range').value;
+    document.getElementById('fleet-count-display').innerText = fleet + " EVs";
+    const co2 = (fleet * 3.24).toFixed(1);
+    const fuelLakh = ((fleet * 78500) / 100000).toFixed(1);
+    document.getElementById('annual-co2-display').innerText = co2 + " Tons";
+    document.getElementById('annual-fuel-display').innerText = "₹" + fuelLakh + " Lakh";
+  }
+
+  function openQuoteModal(specLabel) {
+    const modal = document.getElementById('quote-modal');
+    document.getElementById('modal-charger-field').value = specLabel || "Custom Fleet Spec";
+    document.getElementById('quote-form').classList.remove('hidden');
+    document.getElementById('quote-success').classList.add('hidden');
+    modal.classList.remove('hidden');
+    setTimeout(() => { modal.classList.remove('opacity-0'); }, 10);
+  }
+
+  function openConfigQuote() {
+    const label = `${configState.kw} kW (Battery: ${configState.batteryKwh} kWh, ${configState.guns} gun, ${configState.mount}, Solar: ${configState.solar ? "On" : "Off"})`;
+    openQuoteModal(label);
+  }
+
+  function closeQuoteModal() {
+    const modal = document.getElementById('quote-modal');
+    modal.classList.add('opacity-0');
+    setTimeout(() => { modal.classList.add('hidden'); }, 300);
+  }
+
+  function handleQuoteSubmit(e) {
+    e.preventDefault();
+    document.getElementById('quote-form').classList.add('hidden');
+    document.getElementById('quote-success').classList.remove('hidden');
+  }
+
+  function openReelModal(title, stats) {
+    const modal = document.getElementById('reel-modal');
+    document.getElementById('reel-modal-title').innerText = title;
+    document.getElementById('reel-modal-stats').innerText = stats;
+    document.getElementById('reel-modal-caption').innerText = "Testing telemetry for: " + title;
+    modal.classList.remove('hidden');
+    setTimeout(() => { modal.classList.remove('opacity-0'); }, 10);
+  }
+
+  function closeReelModal() {
+    const modal = document.getElementById('reel-modal');
+    modal.classList.add('opacity-0');
+    setTimeout(() => { modal.classList.add('hidden'); }, 300);
+  }
+
+  function downloadPageSource() {
+    const fullHtml = document.documentElement.outerHTML;
+    const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'irav-ev-charging-index.html';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
+
+  // Initialize calculation on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateChargingTime();
+  });
+</script>
+</body></html>
